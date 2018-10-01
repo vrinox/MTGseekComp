@@ -1,0 +1,74 @@
+card-list {
+  .card-list {
+    position: relative;
+    border-bottom: 1px solid #dedede;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    height: 60px;
+    overflow:hidden;
+    .img {
+      width: 75px;
+      height: 50px;
+      overflow: hidden;
+      border-radius: 10px;
+      float: left;
+      background: --gradient;
+      .visor  {
+        position: relative;
+        width: 90px;
+        img{
+          position: absolute;
+          width: 100px;
+          top: -15px;
+          left: -8px;
+        }
+      }
+    }
+    .texto-sup {
+      width: calc(100% - 85px);
+      float: left;
+      margin-top: 5px;
+      .cantidad {
+        float: left;
+        margin: 0px 4px;
+        font-weight: bold;
+        font-size: 1.4em;
+      }
+      .nombre {
+        float: left;
+        margin-top: 4px;
+        font-weight: bold;
+        font-size: 1.1em
+      }
+    }
+    .texto {
+      float: left;
+      margin-top: 5px;
+      font-size: 0.9em;
+      margin-left: 3px;
+      max-width: calc(100% - (58px + 18px + 75px);
+      max-height: 1.3em;
+      overflow: hidden;
+    }
+    .stats {
+      float: left;
+      margin-top: 5px;
+      font-size: 0.9em;
+      max-height: 1.3em;
+      overflow: hidden;
+    }
+    .exp {
+      position: absolute;
+      right: 13px;
+      bottom:5px;
+      font-size: 18px;
+    }
+    .cost {
+      font-size: 12px;
+      position: absolute;
+      right: 10px;
+      top: 19px;
+    }
+  }
+}
