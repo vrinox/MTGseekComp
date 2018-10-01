@@ -12,6 +12,32 @@ import '@stencil/core';
 
 export namespace Components {
 
+  interface CardList {
+    'carta': any;
+    'mostrar': string;
+  }
+  interface CardListAttributes extends StencilHTMLAttributes {
+    'carta'?: any;
+    'mostrar'?: string;
+  }
+
+  interface ChatBubble {
+    'mensaje': any;
+  }
+  interface ChatBubbleAttributes extends StencilHTMLAttributes {
+    'mensaje'?: any;
+  }
+
+  interface Contador {
+    'add': () => void;
+    'count': any;
+    'remove': () => void;
+  }
+  interface ContadorAttributes extends StencilHTMLAttributes {
+    'count'?: any;
+    'onCambio'?: (event: CustomEvent) => void;
+  }
+
   interface MyComponent {
     'first': string;
     'last': string;
@@ -26,13 +52,37 @@ export namespace Components {
 
 declare global {
   interface StencilElementInterfaces {
+    'CardList': Components.CardList;
+    'ChatBubble': Components.ChatBubble;
+    'Contador': Components.Contador;
     'MyComponent': Components.MyComponent;
   }
 
   interface StencilIntrinsicElements {
+    'card-list': Components.CardListAttributes;
+    'chat-bubble': Components.ChatBubbleAttributes;
+    'contador': Components.ContadorAttributes;
     'my-component': Components.MyComponentAttributes;
   }
 
+
+  interface HTMLCardListElement extends Components.CardList, HTMLStencilElement {}
+  var HTMLCardListElement: {
+    prototype: HTMLCardListElement;
+    new (): HTMLCardListElement;
+  };
+
+  interface HTMLChatBubbleElement extends Components.ChatBubble, HTMLStencilElement {}
+  var HTMLChatBubbleElement: {
+    prototype: HTMLChatBubbleElement;
+    new (): HTMLChatBubbleElement;
+  };
+
+  interface HTMLContadorElement extends Components.Contador, HTMLStencilElement {}
+  var HTMLContadorElement: {
+    prototype: HTMLContadorElement;
+    new (): HTMLContadorElement;
+  };
 
   interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
   var HTMLMyComponentElement: {
@@ -41,10 +91,16 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
+    'card-list': HTMLCardListElement
+    'chat-bubble': HTMLChatBubbleElement
+    'contador': HTMLContadorElement
     'my-component': HTMLMyComponentElement
   }
 
   interface ElementTagNameMap {
+    'card-list': HTMLCardListElement;
+    'chat-bubble': HTMLChatBubbleElement;
+    'contador': HTMLContadorElement;
     'my-component': HTMLMyComponentElement;
   }
 

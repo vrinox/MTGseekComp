@@ -1,0 +1,44 @@
+contador {
+  .contador {
+    width: 100%;
+    background-color: var(--colors-light);
+    button {
+      margin-top: 5px !important;
+      margin-left: -5px !important;
+    }
+    .numero {
+      width: 44px;
+      height: 44px;
+      float: left;
+      font-size: 22px;
+      text-align: center;
+      padding-top: 10px;
+      color:white;
+      &.red{
+        background-color: #d32f2f;
+      }
+      &.blue{
+        background-color: #303f9f;
+      }
+      &.pink {
+        background-color: #c2185b;
+      }
+      &.purple {
+        background-color: #c2185b;
+      }
+      &.green {
+        background-color:#1b5e20;
+      }
+      &.brown {
+        background-color: #4e342e;
+      }
+    }
+    p {
+      float: left;
+      padding-left: 1em;
+      font-size: 16px;
+      margin-top: 12px;
+      margin-bottom: 6px;
+    }
+  }//fin contador
+}
